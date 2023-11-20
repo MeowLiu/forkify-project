@@ -7,8 +7,6 @@ class ResultsView extends View {
 	_message = "";
 
 	_generateMarkup() {
-		console.log(this._data);
-
 		return this._data.reduce(
 			(acc, result) => acc + previewView.render(result, false),
 			""

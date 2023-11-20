@@ -11,8 +11,6 @@ class bookmarksView extends View {
 	}
 
 	_generateMarkup() {
-		console.log(this._data);
-
 		return this._data.reduce(
 			(acc, bookmark) => acc + previewView.render(bookmark, false),
 			""

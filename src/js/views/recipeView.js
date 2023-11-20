@@ -26,8 +26,9 @@ class recipeView extends View {
 	addHandlerAddBookmark(handler) {
 		this._parentElement.addEventListener("click", (event) => {
 			const btn = event.target.closest(".btn--bookmark");
+
 			if (!btn) return;
-			console.log(btn);
+
 			handler();
 		});
 	}
@@ -81,7 +82,12 @@ class recipeView extends View {
                 </div>
             </div>
 
-            <div class="recipe__user-generated">
+            <div class="recipe__user-generated ${
+				this._data.key ? "" : "hidden"
+			}">
+                <svg>
+                    <use href="${icons}#icon-user"></use>
+                </svg>
             </div>
             <button class="btn--round btn--bookmark">
                 <svg class="">
