@@ -2,10 +2,10 @@
 	"name": "starter2",
 	"version": "1.0.0",
 	"description": "Recipe application",
-	"main": "index.html",
+	"default": "index.html",
 	"scripts": {
 		"start": "parcel index.html",
-		"build": "parcel build index.html"
+		"build": "parcel build index.html --dist-dir ./dist"
 	},
 	"author": "Meow Liu",
 	"license": "ISC",
